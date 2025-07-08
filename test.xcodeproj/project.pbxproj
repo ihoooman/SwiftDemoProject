@@ -71,6 +71,11 @@
 			path = test;
 			sourceTree = "<group>";
 		};
+		E2F03D892E1D49E4000D6A48 /* Media */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Media;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		E2881A6F2E1BEC0400A98925 = {
 			isa = PBXGroup;
 			children = (
+				E2F03D892E1D49E4000D6A48 /* Media */,
 				E2F03D822E1D361A000D6A48 /* Media.xcassets */,
 				E23482752E1D2657005CFEEF /* SwiftDemoProjectApp.swift */,
 				E23482712E1D2278005CFEEF /* LICENSE */,
@@ -186,6 +192,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E2881A7A2E1BEC0400A98925 /* test */,
+				E2F03D892E1D49E4000D6A48 /* Media */,
 			);
 			name = test;
 			packageProductDependencies = (
