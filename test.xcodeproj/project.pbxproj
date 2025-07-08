@@ -11,6 +11,8 @@
 		E23482722E1D2278005CFEEF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E23482712E1D2278005CFEEF /* LICENSE */; };
 		E23482742E1D2290005CFEEF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E23482732E1D2290005CFEEF /* README.md */; };
 		E23482762E1D2669005CFEEF /* SwiftDemoProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23482752E1D2657005CFEEF /* SwiftDemoProjectApp.swift */; };
+		E2F03D832E1D361A000D6A48 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F03D822E1D361A000D6A48 /* Media.xcassets */; };
+		E2F03D852E1D3B9D000D6A48 /*  generate-icons.sh in Resources */ = {isa = PBXBuildFile; fileRef = E2F03D842E1D3B98000D6A48 /*  generate-icons.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		E234827B2E1D2866005CFEEF /* SwiftDemoProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemoProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23482882E1D2890005CFEEF /* SwiftDemoProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemoProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2881A782E1BEC0400A98925 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F03D822E1D361A000D6A48 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		E2F03D842E1D3B98000D6A48 /*  generate-icons.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = " generate-icons.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,6 +90,8 @@
 		E2881A6F2E1BEC0400A98925 = {
 			isa = PBXGroup;
 			children = (
+				E2F03D822E1D361A000D6A48 /* Media.xcassets */,
+				E2F03D842E1D3B98000D6A48 /*  generate-icons.sh */,
 				E23482752E1D2657005CFEEF /* SwiftDemoProjectApp.swift */,
 				E23482712E1D2278005CFEEF /* LICENSE */,
 				E234826F2E1D2270005CFEEF /* .gitignore */,
@@ -241,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F03D832E1D361A000D6A48 /* Media.xcassets in Resources */,
+				E2F03D852E1D3B9D000D6A48 /*  generate-icons.sh in Resources */,
 				E23482702E1D2270005CFEEF /* .gitignore in Resources */,
 				E23482722E1D2278005CFEEF /* LICENSE in Resources */,
 				E23482742E1D2290005CFEEF /* README.md in Resources */,
@@ -491,24 +499,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUPRKHMKU5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo app";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -523,24 +537,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUPRKHMKU5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo app";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
