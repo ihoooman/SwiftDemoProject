@@ -27,16 +27,16 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                         .frame(height: 15)
-                    Image(systemName: "appletv.badge.checkmark.fill")
+                    Image(systemName: "gear.circle")
                         .imageScale(.large)
                         .font(.system(size: 120))
                         .foregroundStyle(.tint)
                     Spacer()
-                    Text("Hello, world!")
+                    Text("Hello, This is a test app")
                         .font(.system(size: 25))
                     Spacer()
                         .frame(height: 10)
-                    Text("you can go to next page")
+                    Text("too show Swift power")
                     Spacer()
                 }
                 VStack {
@@ -122,19 +122,18 @@ struct NextView: View {
 
 struct WaitView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var showConfirmation = false
     var body: some View {
         ZStack {
             VStack() {
                 Spacer()
                     .frame(height: 15)
-                Image(systemName: "arrow.triangle.2.circlepath")
+                Image(systemName: "gearshape.arrow.trianglehead.2.clockwise.rotate.90")
                     .imageScale(.large)
                     .font(.system(size: 120))
                     .foregroundStyle(.tint)
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(2)
-                Text("Check for update...")
+                Spacer()
+                Text("Getting Data...")
                     .font(.title2)
                     .padding(.bottom, 20)
                 Spacer()
@@ -142,11 +141,11 @@ struct WaitView: View {
                 VStack {
                     Spacer()
                     HStack {
-                        Button("Cancel") {}
+                        Button("Back") {}
                             .disabled(true)
                         Spacer()
                         Button("Cancel") {
-                            dismiss()
+                            showConfirmation = true
                         }
                     }
                     .font(.title3)
@@ -156,6 +155,14 @@ struct WaitView: View {
         }
         .navigationTitle("Wait")
         .padding()
+        .alert("Are You Sure Want To Exit?", isPresented: $showConfirmation) {
+            Button("Yes", role: .destructive) {
+                exit(0)
+            }
+            Button("Back", role: .cancel) {}
+        } message: {
+            Text("This Will Close Application")
+        }
     }
 }
 
@@ -167,3 +174,4 @@ struct WaitView: View {
     WaitView()
     
 }
+
