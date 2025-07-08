@@ -7,7 +7,7 @@
 
 #!/usr/bin/env bash
 # آدرس پوشه‌ی AppIcon.appiconset در پروژه
-ICONSET="Assets.xcassets/AppIcon.appiconset"
+ICONSET="Media.xcassets/icon.png.imageset"
 # نام فایل مبنا
 BASE_ICON="$ICONSET/icon.png"
 
