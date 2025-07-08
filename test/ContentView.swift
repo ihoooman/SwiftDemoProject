@@ -36,7 +36,7 @@ struct ContentView: View {
                         .font(.system(size: 25))
                     Spacer()
                         .frame(height: 10)
-                    Text("too show Swift power")
+                    Text("to show the Swift power")
                     Spacer()
                 }
                 VStack {
@@ -89,7 +89,7 @@ struct NextView: View {
                     .font(.system(size: 25))
                 Spacer()
                     .frame(height: 10)
-                Text("Lets setup")
+                Text("Let's setup")
                 Spacer()
             }
             VStack {
@@ -123,6 +123,7 @@ struct NextView: View {
 struct WaitView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showConfirmation = false
+    @State private var showSuccess = false
     var body: some View {
         ZStack {
             VStack() {
@@ -133,6 +134,7 @@ struct WaitView: View {
                     .font(.system(size: 120))
                     .foregroundStyle(.tint)
                 Spacer()
+                    .frame(height:20)
                 Text("Getting Data...")
                     .font(.title2)
                     .padding(.bottom, 20)
@@ -153,6 +155,11 @@ struct WaitView: View {
                 }
             }
         }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                showSuccess = true
+            }
+        }
         .navigationTitle("Wait")
         .padding()
         .alert("Are You Sure Want To Exit?", isPresented: $showConfirmation) {
@@ -162,6 +169,13 @@ struct WaitView: View {
             Button("Back", role: .cancel) {}
         } message: {
             Text("This Will Close Application")
+        }
+        .alert("Test Successful!", isPresented: $showSuccess) {
+            Button("OK", role: .cancel) {
+                exit(0)
+            }
+        } message: {
+            Text("The test completed successfully.")
         }
     }
 }
@@ -174,4 +188,3 @@ struct WaitView: View {
     WaitView()
     
 }
-
