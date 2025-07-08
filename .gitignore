@@ -9,8 +9,11 @@ xcuserdata/
 *.swp
 *.xcsettings
 
+
 # SwiftPM
 .build/
+.swiftpm/
+
 
 # CocoaPods
 Pods/
